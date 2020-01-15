@@ -47,6 +47,10 @@
             <groupId>com.kumuluz.ee.openapi</groupId>
             <artifactId>kumuluzee-openapi-ui</artifactId>
         </dependency>
+        <dependency>
+            <groupId>fri.kp.rest</groupId>
+            <artifactId>entities</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

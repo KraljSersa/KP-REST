@@ -3,6 +3,9 @@ package fri.kp.rest.generic.entities;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries(value = {
+        @NamedQuery(name = "GenericItem.getById",query = "select i from GenericItem i where i.id = :id"),
+})
 public class GenericItem {
 
     @Id
