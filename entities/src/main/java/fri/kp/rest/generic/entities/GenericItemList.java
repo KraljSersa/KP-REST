@@ -12,4 +12,32 @@ public class GenericItemList {
 
     @OneToMany
     private List<GenericItem> itemList;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public List<GenericItem> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(List<GenericItem> itemList) {
+        this.itemList = itemList;
+    }
+
+    public void addItem(GenericItem item) {
+        itemList.add(item);
+    }
+
+    public void removeItem(GenericItem item) {
+        itemList.forEach(i -> {
+            if (i.getId().equals(item.getId())) {
+                itemList.remove(item);
+            }
+        });
+    }
 }

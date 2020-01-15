@@ -3,7 +3,9 @@
     <persistence-unit name="kp-rest-service-jpa" transaction-type="JTA">
         <jta-data-source>jdbc/kp-rest</jta-data-source>
 
-        <class>fri.kp.rest.entity.Item</class>
+        <class>fri.kp.rest.generic.entities.GenericItem</class>
+        <class>fri.kp.rest.generic.entities.GenericItemList</class>
+
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
             <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
