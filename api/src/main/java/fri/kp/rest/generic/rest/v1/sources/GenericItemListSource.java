@@ -44,7 +44,6 @@ public class GenericItemListSource {
             )})
     @SecurityRequirement(name = "openid-connect")
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public Response returnAllGenericLists(){
         QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
         List<GenericItemList> users = slb.getGenericLists(query);

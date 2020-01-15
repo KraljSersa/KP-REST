@@ -37,7 +37,6 @@ public class GenericItemSource {
             )})
     @SecurityRequirement(name = "openid-connect")
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public Response returnAllItems(){
         QueryParameters query = QueryParameters.query(uriInfo.getRequestUri().getQuery()).build();
         List<GenericItem> items = itemBean.getAll(query);
