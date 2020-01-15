@@ -1,0 +1,14 @@
+kumuluzee:
+  name: kp-rest-service
+  version: 1.0.0
+  env:
+    name: dev
+  openapi:
+    enabled: true
+  # Database
+  datasources:
+    - jndi-name: jdbc/kp-rest
+      connection-url: jdbc:postgresql://localhost:5431/kp-rest-service
+      username: postgres
+      password: postgres
+      max-pool-size: 20
